@@ -1,4 +1,4 @@
-# Food suggester API
+# Recipe finder API
 
 This is a website that uses a [food recipes](https://developer.edamam.com/) API to display different recipes on screen. **It's in Spanish**.
 
