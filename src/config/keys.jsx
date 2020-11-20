@@ -13,8 +13,5 @@ const recipeAPI = (query) => {
     apicredentials.api_key
   );
 };
-"https://api.edamam.com/search?q=chicken&app_id=" +
-  apicredentials.api_id +
-  "&app_key=" +
-  apicredentials.api_key;
+
 export default recipeAPI;
