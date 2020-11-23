@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import RecipeDetails from "./Details";
 
 // Stateless component porque solo es de presentación
 // Se recibe el parametro de receta del query de map en App.jsx
 const Recipe = ({ recipe }) => {
+  const [showIngredients, setShowIngredients] = useState(false);
   // Se atrapan los valores
-  const { label, image, url /*ingredients*/ } = recipe.recipe;
+  const { label, image, url, ingredients } = recipe.recipe;
   // Se devuelve la la vista del componente
   return (
     <div className="recipe">
@@ -18,7 +20,10 @@ const Recipe = ({ recipe }) => {
         Saber más
       </a>
 
-      <button>Ingredientes</button>
+      <button onClick={() => setShowIngredients(!showIngredients)}>
+        Ingredientes
+      </button>
+      {showIngredients && <RecipeDetails ingredients={ingredients} />}
     </div>
   );
 };
