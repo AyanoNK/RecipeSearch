@@ -71,6 +71,7 @@ const App = () => {
       <div className="recipes">
         {/* Si el arreglo de recetas no está vacío, se mapea. */}
         {/* condición && (lo que pasa si true) */}
+        {/* condicion ? verdadero : falso */}
         {recipes !== [] &&
           recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)}
       </div>
